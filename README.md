@@ -18,15 +18,15 @@ de confidencialidad, en binarios Flutter/Dart compilados en AOT.
 
 ## Vulnerabilidades implementadas (v1)
 
-| # | Vulnerabilidad | Ubicación | Categoría MASVS |
-|---|---|---|---|
-| 1 | Secretos hardcodeados (API keys en `.env` embebido + colección Postman) | `lib/config/env_config.dart`, `assets/postman_collection_demo.json` | MASVS-STORAGE-1, MASVS-CODE-2 |
-| 2 | Backend/Firebase mal configurado (lectura/escritura sin autenticación) | `backend/firebase-rules-demo.json`, `lib/services/firebase_service.dart` | MASVS-NETWORK, MASVS-AUTH |
-| 3 | IDOR en endpoint de consulta (manipulación de identificador) | `backend/server.js` (`/api/registros/consulta`), `lib/screens/consulta_screen.dart` | MASVS-AUTH-2, OWASP API1 |
-| 4 | Ausencia de MFA | `lib/services/auth_service.dart` | MASVS-AUTH-2 |
-| 5 | Hash de contraseña SHA1 sin salt + pass-the-hash | `lib/services/auth_service.dart`, `backend/server.js` | MASVS-STORAGE, MASVS-AUTH |
-| 6 | Sin certificate pinning | `lib/services/api_service.dart` | MASVS-NETWORK-1 |
-| 7 | Almacenamiento local sin cifrar (en desarrollo) (PDFs/documentos) | `lib/services/storage_service.dart` | MASVS-STORAGE-1 |
+| #   | Vulnerabilidad                                                          | Ubicación                                                                           | Categoría MASVS               |
+| --- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------- |
+| 1   | Secretos hardcodeados (API keys en `.env` embebido + colección Postman) | `lib/config/env_config.dart`, `assets/postman_collection_demo.json`                 | MASVS-STORAGE-1, MASVS-CODE-2 |
+| 2   | Backend/Firebase mal configurado (lectura/escritura sin autenticación)  | `backend/firebase-rules-demo.json`, `lib/services/firebase_service.dart`            | MASVS-NETWORK, MASVS-AUTH     |
+| 3   | IDOR en endpoint de consulta (manipulación de identificador)            | `backend/server.js` (`/api/registros/consulta`), `lib/screens/consulta_screen.dart` | MASVS-AUTH-2, OWASP API1      |
+| 4   | Ausencia de MFA                                                         | `lib/services/auth_service.dart`                                                    | MASVS-AUTH-2                  |
+| 5   | Hash de contraseña SHA1 sin salt + pass-the-hash                        | `lib/services/auth_service.dart`, `backend/server.js`                               | MASVS-STORAGE, MASVS-AUTH     |
+| 6   | Sin certificate pinning                                                 | `lib/services/api_service.dart`                                                     | MASVS-NETWORK-1               |
+| 7   | Almacenamiento local sin cifrar (en desarrollo) (PDFs/documentos)       | `lib/services/storage_service.dart`                                                 | MASVS-STORAGE-1               |
 
 Ver `docs/OWASP_MASVS_MAPPING.md` para el detalle técnico de cada hallazgo y
 `VULNERABILITIES.md` para el paso a paso de explotación de cada uno.
@@ -56,6 +56,7 @@ xela-coders-app/
 ## Cómo correrlo
 
 **Backend:**
+
 ```bash
 cd backend
 npm install
@@ -63,12 +64,27 @@ node server.js
 ```
 
 **App Flutter** (requiere Flutter SDK instalado, ver flutter.dev):
+
 ```bash
 flutter pub get
 flutter run
+```
+
+**_Corriendo la App en linux:_**
+
+Instalar flutter por el medio preferido: snapd, yay (sí es distro basada en Arch), o directo desde curl. Luego, desde la carpeta raíz del proyecto, ejecutar estos comandos en orden:
+
+```bash
+flutter config --enable-linux-desktop
+flutter create --platforms=linux .
+flutter run -d linux
 ```
 
 ## Licencia y uso
 
 Uso educativo. MIT License. No se recomienda compilar y publicar esta app en
 tiendas de aplicaciones reales.
+
+```
+
+```
