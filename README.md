@@ -14,8 +14,7 @@ patrones de vulnerabilidad **frecuentes en apps móviles Flutter mal aseguradas*
 alineados con OWASP MASVS v2.1 y OWASP Mobile Top 10.
 
 El objetivo es tener un caso de estudio público, reproducible y sin restricciones
-de confidencialidad, para acompañar una charla sobre análisis de seguridad en
-binarios Flutter/Dart compilados en AOT.
+de confidencialidad, en binarios Flutter/Dart compilados en AOT.
 
 ## Vulnerabilidades implementadas (alcance v1)
 
