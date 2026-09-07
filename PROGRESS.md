@@ -12,9 +12,7 @@
   hardcodeados, Firebase/backend abierto, IDOR, sin MFA, SHA1 sin salt +
   pass-the-hash, sin certificate pinning, storage local sin cifrar.
 - Fuera de alcance v1 (posible v2): falta de logout, falta de
-  ofuscación/build flags, falta de detección de root/jailbreak/Frida,
-  work papers de gobierno/contratación/SIEM/BIA-DRP (esos son organizacionales,
-  no de código, y no aplican a un repo de demo técnica).
+  ofuscación/build flags, falta de detección de root/jailbreak/Frida.
 - Todos los secretos, claves, usuarios y datos en este repo son
   **ficticios/dummy**, nunca reales ni derivados de auditorías de terceros.
 
@@ -107,10 +105,8 @@ Credenciales de prueba (ficticias): ver `backend/server.js`.
    Blutter) y capturar evidencia de la vuln #1.
 3. Configurar Burp/mitmproxy contra el emulador para capturar evidencia de
    la vuln #6.
-4. Grabar screenshots/video de cada explotación para el writeup de GitHub
-   (usando material pregrabado en lugar de demo en vivo).
-5. Decidir si se agrega v2 (logout, ofuscación, anti-root) o se deja v1.
-6. Redactar el writeup técnico final (README ya tiene la base).
+4. Decidir si se agrega v2 (logout, ofuscación, anti-root) o se deja v1.
+
 
 ## Historial de sesiones
 
