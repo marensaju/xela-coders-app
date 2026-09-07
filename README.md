@@ -16,7 +16,7 @@ alineados con OWASP MASVS v2.1 y OWASP Mobile Top 10.
 El objetivo es tener un caso de estudio público, reproducible y sin restricciones
 de confidencialidad, en binarios Flutter/Dart compilados en AOT.
 
-## Vulnerabilidades implementadas (alcance v1)
+## Vulnerabilidades implementadas (v1)
 
 | # | Vulnerabilidad | Ubicación | Categoría MASVS |
 |---|---|---|---|
