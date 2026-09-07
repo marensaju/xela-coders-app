@@ -58,7 +58,7 @@ mitmproxy --mode transparent
 Resultado esperado: todo el tráfico HTTPS de la app se intercepta y
 modifica sin que la app lo detecte ni cierre la conexión.
 
-## 7. Storage local sin cifrar
+## 7. Storage local sin cifrar (en desarrollo)
 
 ```bash
 adb shell run-as com.xelacoders.demo ls files/
