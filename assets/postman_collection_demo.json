@@ -1,0 +1,36 @@
+{
+  "info": {
+    "name": "Xela Coders App - Demo API (VULNERABLE, secretos embebidos)",
+    "description": "⚠️ Colección de Postman incluida como asset dentro del APK. Contiene credenciales en texto plano guardadas 'para que el equipo de QA no tenga que pedirlas cada vez'. Todas las credenciales son ficticias.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    { "key": "base_url", "value": "https://api.xelacoders-demo.local/XCAPI" },
+    { "key": "api_key", "value": "AIzaSyD_XELA_DEMO_FAKEKEY_1234567890ab" },
+    { "key": "app_id", "value": "xela-coders-demo-app-001" },
+    { "key": "postman_api_token", "value": "PMAK-xelacoders-demo-000000000000000000000000" }
+  ],
+  "item": [
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "x-api-key", "value": "{{api_key}}" },
+          { "key": "x-app-id", "value": "{{app_id}}" }
+        ],
+        "url": "{{base_url}}/auth/login"
+      }
+    },
+    {
+      "name": "Consulta (vulnerable a IDOR)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "x-api-key", "value": "{{api_key}}" }
+        ],
+        "url": "{{base_url}}/registros/consulta?documentId=1234567890101"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "_comment": "⚠️ Reglas de Firebase Realtime Database INTENCIONALMENTE inseguras, para fines demostrativos. Esto reproduce el patrón real de exposición: lectura y escritura públicas, sin exigir auth != null, combinado con una API Key sin restricciones de aplicación con Identity Toolkit habilitado.",
+  "rules": {
+    ".read": true,
+    ".write": true
+  },
+  "_correccion_recomendada": {
+    "rules": {
+      "users": {
+        "$uid": {
+          ".read": "auth != null && auth.uid === $uid",
+          ".write": "auth != null && auth.uid === $uid"
+        }
+      }
+    },
+    "notas": [
+      "Restringir la Google API Key por aplicación (paquete + huella SHA-1/SHA-256) y por API habilitada en Google Cloud Console.",
+      "Deshabilitar Identity Toolkit API si no se usa explícitamente Firebase Auth con ese flujo.",
+      "Nunca dejar '.read'/'.write' en true a nivel raíz en producción."
+    ]
+  }
+}

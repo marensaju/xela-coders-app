@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Configuración de seguridad de red INTENCIONALMENTE permisiva.
+
+  Dos efectos, ambos deliberados para esta demo:
+
+  1. cleartextTrafficPermitted="true" permite HTTP plano, necesario para
+     hablar con el backend mock local (http://10.0.2.2:3000).
+
+  2. El <trust-anchors> incluye "user", es decir, la app confía en los
+     certificados CA instalados por el usuario en el dispositivo. Desde
+     Android 7 (API 24) las apps ignoran por defecto las CAs de usuario,
+     lo que rompería la interceptación con Burp/mitmproxy. Al incluirlas
+     aquí, la app vuelve a ser interceptable — reproduciendo el escenario
+     de una app sin certificate pinning corriendo en un dispositivo donde
+     el atacante ya logró instalar su CA.
+
+  En una app real y bien configurada esto NO debe estar: se omite "user"
+  del trust-anchors y, además, se implementa certificate pinning explícito
+  a nivel de código.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

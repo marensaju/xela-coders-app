@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Configuracion de seguridad de red INTENCIONALMENTE permisiva.
+  1. cleartextTrafficPermitted permite HTTP plano hacia el backend mock local.
+  2. El trust-anchors incluye "user", de modo que la app confia en las CAs
+     instaladas por el usuario. Desde Android 7 las apps las ignoran por
+     defecto, lo que romperia la interceptacion con Burp. Al incluirlas,
+     la app vuelve a ser interceptable.
+  En una app real esto NO debe estar, y ademas debe implementarse pinning.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

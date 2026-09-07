@@ -1,0 +1,29 @@
+name: xela_coders_app
+description: >
+  Demo educativa de app móvil vulnerable (Xela Coders App) para investigación
+  en seguridad de aplicaciones Flutter/Dart. NO usar en producción.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^1.2.0
+  crypto: ^3.0.3
+  shared_preferences: ^2.2.2
+  path_provider: ^2.1.2
+  firebase_core: ^2.27.0
+  firebase_database: ^10.4.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/postman_collection_demo.json
+    - .env

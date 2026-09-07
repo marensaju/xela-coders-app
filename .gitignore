@@ -1,0 +1,59 @@
+# ─────────────────────────────────────────────────────────────
+# NOTA IMPORTANTE PARA ESTE REPOSITORIO
+#
+# El archivo `.env` de la raíz NO está excluido, y eso es
+# intencional: forma parte de la demostración de la
+# vulnerabilidad #1 (secretos hardcodeados empaquetados como
+# asset del APK). Todas las credenciales que contiene son
+# ficticias.
+#
+# En un proyecto real, `.env` SIEMPRE debe ir en .gitignore.
+# ─────────────────────────────────────────────────────────────
+
+# Flutter / Dart
+.dart_tool/
+.packages
+.pub-cache/
+.pub/
+build/
+.flutter-plugins
+.flutter-plugins-dependencies
+pubspec.lock
+
+# IDEs
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+
+# Android
+android/.gradle/
+android/local.properties
+android/key.properties
+android/app/debug/
+android/app/profile/
+android/app/release/
+*.jks
+*.keystore
+
+# iOS
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/Generated.xcconfig
+
+# Backend
+backend/node_modules/
+backend/package-lock.json
+
+# Artefactos de análisis (no versionar APKs ni extracciones)
+*.apk
+*.aab
+*.ipa
+apk_extract/
+out_apktool/
+blutter_out/
