@@ -29,8 +29,8 @@ devuelve todos los registros sin ningún header de autorización.
 # Autenticado como jgarcia, pero solicitando el documentId de mlopez:
 curl -s "http://localhost:3000/api/registros/consulta?documentId=2222222222222"
 ```
-Resultado esperado: el backend devuelve el registro de mlopez sin verificar
-que quien pregunta sea mlopez.
+Resultado esperado: el backend devuelve el registro de "usuario" sin verificar
+que quien pregunta sea "usuario".
 
 ## 4. Sin MFA
 
