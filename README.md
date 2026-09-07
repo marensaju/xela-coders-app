@@ -53,7 +53,7 @@ xela-coders-app/
 └── docs/OWASP_MASVS_MAPPING.md
 ```
 
-## Cómo correrlo (para grabar el video/demo)
+## Cómo correrlo
 
 **Backend:**
 ```bash
