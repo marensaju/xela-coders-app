@@ -26,7 +26,7 @@ de confidencialidad, en binarios Flutter/Dart compilados en AOT.
 | 4 | Ausencia de MFA | `lib/services/auth_service.dart` | MASVS-AUTH-2 |
 | 5 | Hash de contraseña SHA1 sin salt + pass-the-hash | `lib/services/auth_service.dart`, `backend/server.js` | MASVS-STORAGE, MASVS-AUTH |
 | 6 | Sin certificate pinning | `lib/services/api_service.dart` | MASVS-NETWORK-1 |
-| 7 | Almacenamiento local sin cifrar (PDFs/documentos) | `lib/services/storage_service.dart` | MASVS-STORAGE-1 |
+| 7 | Almacenamiento local sin cifrar (en desarrollo) (PDFs/documentos) | `lib/services/storage_service.dart` | MASVS-STORAGE-1 |
 
 Ver `docs/OWASP_MASVS_MAPPING.md` para el detalle técnico de cada hallazgo y
 `VULNERABILITIES.md` para el paso a paso de explotación de cada uno.
