@@ -1,14 +1,14 @@
-# Xela Coders App (Demo Vulnerable) 🇬🇹
+# Xela Coders App (Demo Vulnerable)
 
 > ⚠️ **PROYECTO EDUCATIVO — NO USAR EN PRODUCCIÓN**
 > Esta es una aplicación móvil **intencionalmente vulnerable**, construida desde cero
-> para fines de investigación en seguridad y divulgación en conferencias (Ekoparty 2026).
+> para fines de investigación en seguridad y divulgación en conferencias.
 > Todos los datos, claves, organización ("Xela Coders") y usuarios son **ficticios**.
 > No contiene código, secretos ni datos reales de ningún cliente o auditoría.
 
 ## ¿Qué es esto?
 
-Una app Flutter/Dart + backend Node.js que simula una aplicación institucional
+Una app Flutter/Dart + backend Node.js que simula una aplicación móvil de una organización
 ("Xela Coders App") y reproduce, de forma controlada y documentada, un conjunto de
 patrones de vulnerabilidad **frecuentes en apps móviles Flutter mal aseguradas**,
 alineados con OWASP MASVS v2.1 y OWASP Mobile Top 10.
@@ -68,9 +68,6 @@ node server.js
 flutter pub get
 flutter run
 ```
-
-> Nota: este repo se genera y versiona por partes entre sesiones de trabajo.
-> Revisa `PROGRESS.md` antes de continuar el desarrollo.
 
 ## Licencia y uso
 
